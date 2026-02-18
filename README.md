@@ -35,6 +35,27 @@ tests/
 - **Crowded Risk-On**: Extreme consensus long positioning creates snap-back risk
 - **Capitulation**: Extreme short positioning — historically highest risk-adjusted entry points
 
+### Running the Dashboard
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+This opens an interactive web dashboard where you can:
+- Adjust indicator sliders to explore regime classifications in real time
+- Load preset scenarios (Sept 2019, March 2009, Late 2021, Mid-2023, Stagflation)
+- See probability distributions across all regime states
+- Monitor sub-state overlays (Fragile, Crowded, Capitulation)
+
+### Free Hosting on Streamlit Community Cloud
+
+1. Push this repo to GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Sign in with GitHub and click **New app**
+4. Select this repo, branch, and `app.py` as the main file
+5. Click **Deploy** — your dashboard will be live at a public URL
+
 ### Running Tests
 
 ```bash
@@ -55,5 +76,5 @@ python -m pytest tests/test_regime_config.py -v
 ### Requirements
 
 - Python 3.11+
-- No external dependencies for Phase 0 (stdlib only)
+- `streamlit` for the dashboard (see `requirements.txt`)
 - pytest for running tests
